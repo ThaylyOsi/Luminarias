@@ -1,0 +1,98 @@
+body{
+    background-color: rgb(78, 10, 10)
+}
+
+.image-container {
+    position: relative;
+    width: 600px; 
+    background-color: green;
+}
+/*
+.image-containerFull {
+    position: fixed;
+    width: 620px; 
+    background-color: #000000;
+    border: 5px solid greenyellow;
+
+}
+*/
+.image-container img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto; /* Aplica margen automático a los lados */ 
+    border: 1px solid white; /* Solo para visualización */
+}
+
+.image-container .button {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f44336;
+    color: white;
+    border: 3px solid orange;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Estilos comunes para todos los botones
+.button { 
+    background-color: #8c209a;
+    color: white; 
+    border: 2px solid black; 
+    border-radius: 10px; /* Esquinas redondeadas
+    padding: 7px 22px; 
+    cursor: pointer; 
+    transform: translate(-50%, -50%); 
+}*/
+
+/* Estilos específicos para cada botón */ 
+.btn_lc {
+    transform: translate(-50%, -50%);
+    /*background-color: #205F9A;*/
+    background-color: #1bc037; 
+    color: rgb(136, 26, 26);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 9px 27px;
+    cursor: pointer;
+
+}
+
+/* Posición para cada botón */ 
+.btn_lc #btn_lc1 { position: absolute; top: 122px; left: 42px; } 
+.btn_lc #btn_lc2 { position: absolute; top: 22px; left: 160px; } 
+.btn_lc #btn_lc3 { position: absolute; top: 22px; left: 272px; }
+#btn_lc4 { position: absolute; top: 22px; left: 442px; }
+#btn_lc5 { position: absolute; top: 455px; left: 248px; }
+#btn_lc6 { position: absolute; top: 455px; left: 104px; }
+
+.btn_OnOff {
+    transform: translate(-50%, -50%);
+    background-color: #f0e408; /* Color del botón */
+    color: rgb(10, 6, 252);
+    border: 2px solid black;
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 9px 27px;
+    cursor: pointer;
+}
+
+
+
+
+#OnOff1 { position: absolute; top: 38px; left: 492px; } 
+#OnOff4 { position: absolute; top: 68px; left: 202px; }
+#OnOff5-1 { position: absolute; top: 98px; left: 302px; }
+#OnOff5-2 { position: absolute; top: 98px; left: 472px; }
+#OnOff5-3 { position: relative; top: -435px; left: 634px; }
+#OnOff6 { position: absolute; top: 38px; left: 452px; }
+
+.image-container {
+    width: 550px; /* Ajusta el tamaño según necesites */ 
+    height: 550px; /* Ajusta el tamaño según necesites */
+}
+
+.button:hover {
+    background-color: #d32f2f; /* Color del botón al pasar el ratón */
+   
+}

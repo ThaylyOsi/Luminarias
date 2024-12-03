@@ -1,0 +1,39 @@
+#panel-body{
+    background-color: #1457CB;
+}
+
+#main{
+    display: block;
+    margin: auto;
+    width: 95%;
+}
+
+#panel-container{
+    background-color: #040E31;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.panel-section{
+    display: flex;
+    padding: 10px;
+    background-color: darkred;
+    border: 1px solid #111
+}
+
+.name-container{
+    background-color: rgb(206, 47, 255);
+    flex-basis: 25%;
+}
+
+.img-container{
+    background-color: white;
+    flex-basis: 50%;
+}
+
+.btn-container{
+    background-color: greenyellow;
+    flex-basis: 25%;
+}

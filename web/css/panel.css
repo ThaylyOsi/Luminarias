@@ -37,3 +37,14 @@
     background-color: greenyellow;
     flex-basis: 25%;
 }
+
+.btn_OnOff_Panel{
+    /*transform: translate(-50%, -50%);
+    background-color: #f0e408;
+    color: rgb(10, 6, 252);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 9px 27px;
+    */
+    cursor: pointer;
+}

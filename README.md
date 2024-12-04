@@ -32,6 +32,18 @@ DIRECTORY STRUCTURE
       views/              contains view files for the Web application
       web/                contains the entry script and Web resources
 
+      assets/             contiene la definición de los activos. 
+      comandos/           contiene comandos de consola (controladores). 
+      config/             contiene configuraciones de aplicaciones. 
+      controllers/        contiene clases de controladores web. 
+      mail/               contiene archivos de vista para correos electrónicos. 
+      models/             contiene clases modelo. 
+      runtime/            contiene archivos generados durante el tiempo de ejecución. 
+      tests/              contiene varias pruebas para la aplicación básica. 
+      proveedor/          contiene paquetes dependientes de terceros. 
+      vistas/             contiene archivos de vista para la aplicación web. 
+      web/                contiene el script de entrada y los recursos Web
+
 
 
 REQUIREMENTS

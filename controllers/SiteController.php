@@ -125,6 +125,54 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+// De Cris - ini
+
+public function actionRunPython()
+{
+    // Ruta al archivo Python
+    $pythonScript = Yii::getAlias('@app/web/python/AsistenteVirtualM2.py');
+
+    // Ejecuta el archivo Python
+    $output = shell_exec("python $pythonScript 2>&1");
+
+    // Muestra la salida del script Python
+    return $this->renderContent("<pre>$output</pre>");
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+public function actionAsistente()
+{
+
+    $output = exec("python C:/xampp/htdocs/proyecto1/web/python/AsistenteVirtualM2.py");
+    echo $output. '--';
+}
+
+public function actionStopPython()
+{
+    // Ruta al archivo de señal
+    $stopSignalFile = Yii::getAlias('@app/web/python/stop_signal.txt');
+
+    // Crear el archivo de señal
+    file_put_contents($stopSignalFile, 'stop');
+
+    return $this->renderContent("El asistente virtual ha sido detenido.");
+
+    
+}
+
+public function actionCloseEndpoint()
+{
+    // Envía un mensaje a los clientes conectados para cerrar la ventana
+    header('Content-Type: text/event-stream');
+    header('Cache-Control: no-cache');
+    echo "data: close\n\n";
+    flush();
+}
+// De Cris - fin
+
+////////////////////////////////////////////////////////////////
+
     //Apertura del croquis del Laboratorio de Sistemas y Computación
     public function actionCroquis(){
         return $this->render('croquis');
@@ -160,15 +208,38 @@ class SiteController extends Controller
         return $this->render('lc6');
     }
 
-  //Aperturar la Sala LC6
+  //Aperturar el Panel
   public function actionPanel (){
     return $this->render('panel');
 }
 
+///////////////////////////////////////////////////////////////////
+
+/* Cris cambió este método original
     //Encender
     public function actionEncender(){
         $valor = "Hola";
         $salida =exec("python ligero.py ".$valor);
         echo $salida;
     }
+*/
+
+// De Cris - ini
+    //Prueba para Encender
+    public function actionEncender(){
+        $valor = "buen día jovenes";
+        $output = exec("python C:/xampp/htdocs/proyecto1/views/site/ligero.py \"$valor\"");
+        echo $output.'--';
+       
+    }
+
+    //Encender
+    public function actionEncenderLed($valor=null){
+        $valor = "encender_LC1";
+        $output = exec("python C:/xampp/htdocs/proyecto1/views/site/encenderled.py \"$valor\"");
+        echo $output.'--';
+       
+    }
+// De Cris - fin
+
 }

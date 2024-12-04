@@ -96,3 +96,28 @@ body{
     background-color: #d32f2f; /* Color del botón al pasar el ratón */
    
 }
+
+.button_asistente {
+
+    transform: translate(-50%, -50%);
+    background-color: #f0e408; /* Color del botón */
+    color: rgb(10, 6, 252);
+    border: 2px solid black;
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 9px 27px;
+    cursor: pointer;
+}
+
+.button_ventana {
+
+    transform: translate(-50%, -50%);
+    background-color: #f0e408; /* Color del botón */
+    color: rgb(10, 6, 252);
+    border: 2px solid black;
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 9px 27px;
+    cursor: pointer;
+}
+
+.button_asistente { position: absolute; top: 455px; left: 104px; } 
+.button_ventana { position: absolute; top: 455px; left: 304px; } 

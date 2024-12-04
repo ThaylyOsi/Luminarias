@@ -27,6 +27,7 @@
             <div class="btn_mgc-container">
                 <?= Html::button('CROQUIS', ['Class' => 'btn_mgc', 'Id' => 'button', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/croquis']) . "';"]) ?>
                 <?= Html::button('PANEL', ['Class' => 'btn_mgc', 'Id' => 'button', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/panel']) . "';"]) ?>
+                <?= Html::button('Ventana', ['class' => 'button_ventana', 'onclick' => "openAssistantWindow()"])?>
             </div>
   
         </div>
@@ -68,5 +69,57 @@
 
         </div>
     </div>
+
+//Parte de Cristian
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        var assistantWindow;
+
+        function openAssistantWindow() {
+            // Ejecuta el asistente virtual
+            $.ajax({
+                url: '<?= Url::to(['site/run-python']) ?>',
+                method: 'GET',
+                success: function(response) {
+                    console.log('Asistente virtual iniciado');
+                },
+                error: function() {
+                    console.log('Error al iniciar el asistente virtual');
+                }
+            });
+            // Calcula el centro de la pantalla
+            var width = 600;
+            var height = 350;
+            var left = (screen.width / 2) - (width / 2);
+            var top = (screen.height / 2) - (height / 2);
+
+        
+            // Abre la ventana emergente centrada
+            assistantWindow = window.open("", "Asistente Virtual", "width=" + width + ",height=" + height + ",top=" + top + ",left=" + left);
+            assistantWindow.document.write(`
+                <div class='popup-content'>
+                    <img src="/proyecto1/web/images/MovimientoAudio.gif" alt="GIF animado" style="width:100%; height:auto;">
+                </div>
+            `);
+            
+        
+        }
+
+        function closeAssistantWindow() {
+            if (assistantWindow && !assistantWindow.closed) {
+                assistantWindow.close();
+            }
+        }
+
+        // Escucha mensajes desde el servidor
+        const eventSource = new EventSource("<?= Url::to(['site/event-stream']) ?>");
+        eventSource.onmessage = function(event) {
+            if (event.data === "close") {
+                closeAssistantWindow();
+            }
+        };
+    </script>
 
 </body>

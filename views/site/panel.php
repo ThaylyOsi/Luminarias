@@ -20,8 +20,8 @@
                     <div class="name-container">BBB</div>
                     <div class="img-container">MMM</div>
                     <div class="btn-container">
-                        <?= Html::button('ON/OFF', ['class' => 'btn_OnOff_Panel', 'id' => 'OnOff1', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/encender']) . "';"]) ?> 
-                        <?= Html::button('ON/OFF', ['class' => 'btn_OnOff_Panel', 'id' => 'OnOff1', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/encender']) . "';"]) ?> 
+                        <?= Html::button('ON', ['class' => 'btn_OnOff_Panel', 'id' => 'OnOff1-', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/encender']) . "';"]) ?> 
+                        <?= Html::button('OFF', ['class' => 'btn_OnOff_Panel', 'id' => 'OnOff1', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/encender']) . "';"]) ?> 
                     </div>             
                 </div>
             <div class="panel-section" id="jefatura">
@@ -96,31 +96,7 @@
                         <?= Html::button('ON/OFF', ['class' => 'btn_OnOff_Panel', 'id' => 'OnOff1', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/encender']) . "';"]) ?> 
                     </div>            
                 </div>
-                <div class="panel-section" id="lc">
-                    <div class="name-container">BBB</div>
-                    <div class="img-container">MMM</div>
-                    <div class="btn-container">
-                        <?= Html::button('ON/OFF', ['class' => 'btn_OnOff_Panel', 'id' => 'OnOff1', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/encender']) . "';"]) ?> 
-                        <?= Html::button('ON/OFF', ['class' => 'btn_OnOff_Panel', 'id' => 'OnOff1', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/encender']) . "';"]) ?> 
-                    </div>             
-                </div>
-                <div class="panel-section" id="">
-                    <div class="name-container">BBB</div>
-                    <div class="img-container">MMM</div>
-                    <div class="btn-container">
-                        <?= Html::button('ON/OFF', ['class' => 'btn_OnOff_Panel', 'id' => 'OnOff1', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/encender']) . "';"]) ?> 
-                        <?= Html::button('ON/OFF', ['class' => 'btn_OnOff_Panel', 'id' => 'OnOff1', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/encender']) . "';"]) ?> 
-                    </div>             
-                </div>
-                <div class="panel-section" id="">
-                    <div class="name-container">BBB</div>
-                    <div class="img-container">MMM</div>
-                    <div class="btn-container">
-                        <?= Html::button('ON/OFF', ['class' => 'btn_OnOff_Panel', 'id' => 'OnOff1', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/encender']) . "';"]) ?> 
-                        <?= Html::button('ON/OFF', ['class' => 'btn_OnOff_Panel', 'id' => 'OnOff1', 'onclick' => "location.href='" . \yii\helpers\Url::to(['site/encender']) . "';"]) ?> 
-                    </div>             
-                </div>
-                <div class="panel-section" id="">
+                <div class="panel-section" id="baños">
                     <div class="name-container">BBB</div>
                     <div class="img-container">MMM</div>
                     <div class="btn-container">
